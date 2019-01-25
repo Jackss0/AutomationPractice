@@ -1,0 +1,15 @@
+D:\VS_WorkSapce\LoginTest\LoginTest\bin\Debug\LoginTest.exe.config
+D:\VS_WorkSapce\LoginTest\LoginTest\bin\Debug\LoginTest.exe
+D:\VS_WorkSapce\LoginTest\LoginTest\bin\Debug\LoginTest.pdb
+D:\VS_WorkSapce\LoginTest\LoginTest\bin\Debug\WebDriver.dll
+D:\VS_WorkSapce\LoginTest\LoginTest\bin\Debug\WebDriver.Support.dll
+D:\VS_WorkSapce\LoginTest\LoginTest\bin\Debug\WebDriver.xml
+D:\VS_WorkSapce\LoginTest\LoginTest\bin\Debug\WebDriver.Support.xml
+D:\VS_WorkSapce\LoginTest\LoginTest\obj\Debug\LoginTest.csprojAssemblyReference.cache
+D:\VS_WorkSapce\LoginTest\LoginTest\obj\Debug\LoginTest.csproj.CoreCompileInputs.cache
+D:\VS_WorkSapce\LoginTest\LoginTest\obj\Debug\LoginTest.csproj.CopyComplete
+D:\VS_WorkSapce\LoginTest\LoginTest\obj\Debug\LoginTest.exe
+D:\VS_WorkSapce\LoginTest\LoginTest\obj\Debug\LoginTest.pdb
+D:\VS_WorkSapce\LoginTest\LoginTest\bin\Debug\Bogus.dll
+D:\VS_WorkSapce\LoginTest\LoginTest\bin\Debug\Bogus.pdb
+D:\VS_WorkSapce\LoginTest\LoginTest\bin\Debug\Bogus.xml
