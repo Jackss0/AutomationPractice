@@ -13,3 +13,13 @@ D:\VS_WorkSapce\LoginTest\LoginTest\obj\Debug\LoginTest.pdb
 D:\VS_WorkSapce\LoginTest\LoginTest\bin\Debug\Bogus.dll
 D:\VS_WorkSapce\LoginTest\LoginTest\bin\Debug\Bogus.pdb
 D:\VS_WorkSapce\LoginTest\LoginTest\bin\Debug\Bogus.xml
+D:\VS_WorkSapce\LoginTest\LoginTest\bin\Debug\AsyncChromeDriver.dll
+D:\VS_WorkSapce\LoginTest\LoginTest\bin\Debug\AsyncOperaDriver.dll
+D:\VS_WorkSapce\LoginTest\LoginTest\bin\Debug\AsyncWebDriver.dll
+D:\VS_WorkSapce\LoginTest\LoginTest\bin\Debug\BaristaLabs.ChromeDevTools.Runtime.Framework.dll
+D:\VS_WorkSapce\LoginTest\LoginTest\bin\Debug\ChromeWebSocketProxy.dll
+D:\VS_WorkSapce\LoginTest\LoginTest\bin\Debug\IAsyncWebBrowserClient.dll
+D:\VS_WorkSapce\LoginTest\LoginTest\bin\Debug\Newtonsoft.Json.dll
+D:\VS_WorkSapce\LoginTest\LoginTest\bin\Debug\websocket-sharp.dll
+D:\VS_WorkSapce\LoginTest\LoginTest\bin\Debug\WebSocket4Net.dll
+D:\VS_WorkSapce\LoginTest\LoginTest\bin\Debug\Newtonsoft.Json.xml

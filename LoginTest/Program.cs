@@ -1,5 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.Opera;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -32,8 +34,21 @@ namespace LoginTest
             string randomOther = new Lorem().Text();
             string randomHomePhoneNumber = new PhoneNumbers().PhoneNumberFormat(1);
             string randomMobilePhoneNumber = new PhoneNumbers().PhoneNumberFormat(1);
-            
-            IWebDriver _driver = new ChromeDriver();
+
+            string folder = "";
+
+            //IWebDriver _driver = new ChromeDriver();
+            IWebDriver _driver = new FirefoxDriver();
+
+            if (_driver.GetType() == typeof(FirefoxDriver))
+            {
+                folder = "Firefox";
+            }
+            else
+            {
+                folder = "Chrome";
+            }
+
             _driver.Manage().Window.Maximize();
             _driver.Url = "http://automationpractice.com/index.php";
 
@@ -43,10 +58,10 @@ namespace LoginTest
                 Screenshot sreenShot = ((ITakesScreenshot)_driver).GetScreenshot();
                 sreenShot.SaveAsFile(path, ScreenshotImageFormat.Png);
             }
-
+            
             void CreateAccount()
             {
-                TakeScreenShot(@"D:\imgs\CreateAccountStep_1.png");
+                TakeScreenShot($@"D:\{folder}\CreateAccountStep_1.png");
 
                 var btnLogin = _driver.FindElement(By.ClassName("login"));
                 btnLogin.Click();
@@ -54,7 +69,7 @@ namespace LoginTest
 
                 var txtEmail = _driver.FindElement(By.ClassName("account_input"));
                 txtEmail.SendKeys(randomEmail);
-                TakeScreenShot(@"D:\imgs\CreateAccountStep_2.png");
+                TakeScreenShot($@"D:\{folder}\CreateAccountStep_2.png");
                 Task.Delay(3500).Wait();
 
                 var btnCreateAccount = _driver.FindElement(By.Id("SubmitCreate"));
@@ -119,7 +134,7 @@ namespace LoginTest
                 txtMobilePhone.SendKeys(randomMobilePhoneNumber);
 
                 //SCREENSHOT STEP 1
-                TakeScreenShot(@"D:\imgs\CreateAccountStep_3.png");
+                TakeScreenShot($@"D:\{folder}\CreateAccountStep_3.png");
                 Task.Delay(3500).Wait();
 
                 var btnRegister = _driver.FindElement(By.Id("submitAccount"));
@@ -144,7 +159,7 @@ namespace LoginTest
                 var btnRegisterLogin = _driver.FindElement(By.Id("SubmitLogin"));
 
                 //SCREENSHOT STEP 2
-                TakeScreenShot(@"D:\imgs\LoginStep.png");
+                TakeScreenShot($@"D:\{folder}\LoginStep.png");
                 btnRegisterLogin.Click();
                 Task.Delay(3500).Wait();
             }
@@ -152,59 +167,64 @@ namespace LoginTest
             void Buy()
             {
                 var btnWomen = _driver.FindElement(By.ClassName("sf-with-ul"));
-                TakeScreenShot(@"D:\imgs\OrderStep_1.png");
+                TakeScreenShot($@"D:\{folder}\OrderStep_1.png");
                 btnWomen.Click();
                 Task.Delay(3500).Wait();
 
                 WebDriverWait wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
-                var element = wait.Until(ExpectedConditions.ElementIsVisible(By.ClassName("first-item-of-tablet-line")));
+                //var element = wait.Until(ExpectedConditions.ElementIsVisible(By.ClassName("first-item-of-tablet-line")));
+                var element = wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("/html/body/div/div[2]/div/div[3]/div[2]/ul/li[1]")));
+
+                IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
+                js.ExecuteScript("arguments[0].scrollIntoView()", element);
+
                 Task.Delay(3500).Wait();
                 Actions action = new Actions(_driver);
                 action.MoveToElement(element).Perform();
-                TakeScreenShot(@"D:\imgs\OrderStep_2.png");
+                TakeScreenShot($@"D:\{folder}\OrderStep_2.png");
                 Task.Delay(3500).Wait();
 
                 var btnAddCart1 = _driver.FindElement(By.XPath("//*[@id='center_column']/ul/li[1]/div/div[2]/div[2]/a[1]"));
-                TakeScreenShot(@"D:\imgs\OrderStep_3.png");
+                TakeScreenShot($@"D:\{folder}\OrderStep_3.png");
                 btnAddCart1.Click();
                 Task.Delay(3500).Wait();
 
                 var btnProccedToCheckout1 = _driver.FindElement(By.XPath("//*[@id='layer_cart']/div[1]/div[2]/div[4]/a"));
-                TakeScreenShot(@"D:\imgs\OrderStep_4.png");
+                TakeScreenShot($@"D:\{folder}\OrderStep_4.png");
                 btnProccedToCheckout1.Click();
                 Task.Delay(3500).Wait();
 
                 var btnProccedToCheckout2 = _driver.FindElement(By.XPath("//*[@id='center_column']/p[2]/a[1]"));
-                TakeScreenShot(@"D:\imgs\OrderStep_5.png");
+                TakeScreenShot($@"D:\{folder}\OrderStep_5.png");
                 btnProccedToCheckout2.Click();
                 Task.Delay(3500).Wait();
 
                 var btnProccedToCheckout3 = _driver.FindElement(By.XPath("//*[@id='center_column']/form/p/button"));
-                TakeScreenShot(@"D:\imgs\OrderStep_6.png");
+                TakeScreenShot($@"D:\{folder}\OrderStep_6.png");
                 btnProccedToCheckout3.Click();
                 Task.Delay(3500).Wait();
 
                 var chkAgree = _driver.FindElement(By.Id("cgv"));
-                TakeScreenShot(@"D:\imgs\OrderStep_7.png");
+                TakeScreenShot($@"D:\{folder}\OrderStep_7.png");
                 chkAgree.Click();
 
                 var btnProccedToCheckout4 = _driver.FindElement(By.XPath("//*[@id='form']/p/button"));
-                TakeScreenShot(@"D:\imgs\OrderStep_8.png");
+                TakeScreenShot($@"D:\{folder}\OrderStep_8.png");
                 btnProccedToCheckout4.Click();
                 Task.Delay(3500).Wait();
 
                 var btnPayBankWire = _driver.FindElement(By.ClassName("bankwire"));
-                TakeScreenShot(@"D:\imgs\OrderStep_9.png");
+                TakeScreenShot($@"D:\{folder}\OrderStep_9.png");
                 btnPayBankWire.Click();
                 Task.Delay(3500).Wait();
 
                 var btnConfirm = _driver.FindElement(By.XPath("//*[@id='cart_navigation']/button"));
-                TakeScreenShot(@"D:\imgs\OrderStep_10.png");
+                TakeScreenShot($@"D:\{folder}\OrderStep_10.png");
                 btnConfirm.Click();
                 Task.Delay(3500).Wait();
 
                 //SCREENSHOT STEP 3
-                TakeScreenShot(@"D:\imgs\OrderStep_final.png");
+                TakeScreenShot($@"D:\{folder}\OrderStep_final.png");
             }
 
             CreateAccount();
