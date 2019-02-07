@@ -5,7 +5,6 @@ D:\VS_WorkSapce\LoginTest\LoginTest\bin\Debug\WebDriver.dll
 D:\VS_WorkSapce\LoginTest\LoginTest\bin\Debug\WebDriver.Support.dll
 D:\VS_WorkSapce\LoginTest\LoginTest\bin\Debug\WebDriver.xml
 D:\VS_WorkSapce\LoginTest\LoginTest\bin\Debug\WebDriver.Support.xml
-D:\VS_WorkSapce\LoginTest\LoginTest\obj\Debug\LoginTest.csprojAssemblyReference.cache
 D:\VS_WorkSapce\LoginTest\LoginTest\obj\Debug\LoginTest.csproj.CoreCompileInputs.cache
 D:\VS_WorkSapce\LoginTest\LoginTest\obj\Debug\LoginTest.csproj.CopyComplete
 D:\VS_WorkSapce\LoginTest\LoginTest\obj\Debug\LoginTest.exe
@@ -23,3 +22,4 @@ D:\VS_WorkSapce\LoginTest\LoginTest\bin\Debug\Newtonsoft.Json.dll
 D:\VS_WorkSapce\LoginTest\LoginTest\bin\Debug\websocket-sharp.dll
 D:\VS_WorkSapce\LoginTest\LoginTest\bin\Debug\WebSocket4Net.dll
 D:\VS_WorkSapce\LoginTest\LoginTest\bin\Debug\Newtonsoft.Json.xml
+D:\VS_WorkSapce\LoginTest\LoginTest\obj\Debug\LoginTest.csprojAssemblyReference.cache

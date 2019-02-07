@@ -14,7 +14,7 @@ using OpenQA.Selenium.Support.Events;
 using OpenQA.Selenium.Support.UI;
 using OpenQA.Selenium.Interactions;
 using Bogus.DataSets;
-
+using System.Configuration;
 
 namespace LoginTest
 {
@@ -36,18 +36,16 @@ namespace LoginTest
             string randomMobilePhoneNumber = new PhoneNumbers().PhoneNumberFormat(1);
 
             string folder = "";
+            
+            IWebDriver _driver;
 
-            //IWebDriver _driver = new ChromeDriver();
-            IWebDriver _driver = new FirefoxDriver();
-
-            if (_driver.GetType() == typeof(FirefoxDriver))
+            if (ConfigurationManager.AppSettings["key"] == "FirefoxDriver")
             {
+                _driver = new FirefoxDriver();
                 folder = "Firefox";
             }
-            else
-            {
-                folder = "Chrome";
-            }
+            else { _driver = new ChromeDriver(); folder = "Chrome"; }
+            
 
             _driver.Manage().Window.Maximize();
             _driver.Url = "http://automationpractice.com/index.php";
